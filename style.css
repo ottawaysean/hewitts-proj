@@ -36,7 +36,59 @@ div.content {
   padding: 1px 16px;
   height: 1000px;
 }
+//added for profile page sidebar
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
 
+.sidebarB a:hover {
+  color: #248f24;
+}
+
+.openbtnSide {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #248f24;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+}
+
+.openbtnSide:hover {
+  background-color: #444;
+}
+
+.sidebarB {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebarB .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidebarB a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+//end of profile page sidebar
 @media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
@@ -52,4 +104,10 @@ div.content {
     text-align: center;
     float: none;
   }
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidebarB {padding-top: 15px;}
+  .sidebarB a {font-size: 18px;}
 }
