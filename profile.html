@@ -2,6 +2,10 @@
 <html>
 <head>
 
+<?php
+	session_start();
+?>
+
 <title>User Profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,7 +49,7 @@
       </nav>
 
 	<div class="sidebar">
-		<a href="#imageSettings"><img src = "profileVector.png"></a>
+		<a href="#imageSettings"><img src= '<?= $_SESSION['avatar']?>' > </a>
 		<a href="#editTrips">Trips</a>
 		<!--<a href="#editLists">Lists</a>-->
 		<a href="#settings">Settings</a>
